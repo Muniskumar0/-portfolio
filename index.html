@@ -1,141 +1,455 @@
+1st code:
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Full-Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Muniskumar | Fullstack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
-    <header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <h1>MUNISKUMAR C</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--primary); font-size: larger;">M</span>UNISKUMAR
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Hi, I'm Muniskumar</h2>
-            <p><span id="role"></span></p>
-            <a href="#contact" class="cta-btn">Hire me!</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" style="background: linear-gradient(45deg, #ff0000 30%, #ffffff 70%); -webkit-background-clip: text;">
+                    I'm Muniskumar
+                </h1>
+                <p class="lead mb-4">Fullstack Developer | Web Developer | Python Developer</p>
+                <div class="d-flex gap-3">
+                    <a href="#projects" style="color: #ffffff;"><button class="btn btn-custom">View Projects</button></a>
+                    <button class="btn btn-outline-light" onclick="downloadCV()">Download CV</button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I'm a skilled Front-End Developer, Web Developer, Full-Stack Developer, and Python Developer with a passion for building responsive, dynamic, and user-friendly web applications. 
-                With expertise in front-end technologies such as HTML, CSS, and JavaScript, as well as back-end technologies like Python and Django, I specialize in creating seamless user experiences across the web. 
-                I'm always excited to learn new technologies and frameworks to expand my skill set.
-            </p>
-            <img src="./muniskumar.jpeg" alt="Profile Picture">
-        </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill" data-skill="HTML">
-                    <span>HTML</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 100%"></div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 profile-container">
+                    <img src="./muniskumar.jpeg" alt="Muniskumar" class="profile-image">
                 </div>
-                <div class="skill" data-skill="CSS">
-                    <span>CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="skill" data-skill="Python">
-                    <span>Python</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="skill" data-skill="JavaScript">
-                    <span>JavaScript</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill" data-skill="React">
-                    <span>React</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill" data-skill="Django">
-                    <span>Django</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill" data-skill="MySQL">
-                    <span>MySQL</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 90%"></div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <h2 class="display-5 mb-4">About Me</h2>
+                    <p class="lead mb-4">
+                        I'm <strong>Muniskumar</strong>, a passionate and dedicated full-stack developer from Tamil Nadu, currently sharpening my skills through a hands-on internship at <strong>Leadsence Media, Chennai</strong>. I specialize in building modern, responsive websites and web applications that are fast, functional, and user-focused.
+                        </p>
+                        <p>
+                        From front-end aesthetics to back-end logic, I enjoy bringing ideas to life in the browser. My go-to tech stack includes HTML, CSS, JavaScript, React, Node.js, and MySQL. When I’m not coding, you’ll find me immersed in Free Fire or watching movies to recharge.
+                        </p>
+                        <p>
+                        I aim to create impactful digital experiences and am always looking for new challenges to grow and innovate.
+                        </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-card mb-4">
+                                <h5 class="text-red">Education</h5>
+                                <p class="mb-0">B.Sc Information Technology</p>
+                                <small>2021-2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill-card mb-4">
+                                <h5 class="text-red">Certificate</h5>
+                                <p class="mb-0">Python Fullstack Developer</p>
+                                <small>Aug 2024 - Jan 2025</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Skills Section -->
+    <section id="skills" class="py-6 bg-black">
         <div class="container">
-            <h2>Contact Me</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:muniskumar050@gmail.com">muniskumar050@gmail.com</a></p>
-                <p>Phone: <a href="tel:+919943257606">+91 99432 57606</a></p>
+            <h2 class="display-5 text-center mb-5">Technical Mastery</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>HTML</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Bootstrap</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>React.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>Django</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-card">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span>MySQL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-meter">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://github.com/Muniskumar0" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/kd_munis__?igsh=aDd0cXAyYTNmcW8x" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/munis.kumar.9634" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="./Muniskumar-BSc(IT)-2024-Python_Fullstack_Developer.pdf" class="btn" download>Download CV</a>
+                
             </div>
         </div>
     </section>
 
-    <footer>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="project-section">
         <div class="container">
-            <p>© 2025 Muniskumar. All rights reserved.</p>
+            <h2 class="display-5 text-center mb-5">Featured Projects</h2>
+            <div class="row g-4">
+                <!-- Food Ordering System -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('./food-order.png');">
+                            <div class="project-tags">
+                                <span class="project-tag">Django</span>
+                                <span class="project-tag">React</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-white mb-3">Food Ordering Website</h3>
+                            <p class="text-white">Full-stack food ordering platform with real-time order tracking, payment integration, and admin dashboard.</p>
+                            <ul class="tech-list">
+                                <li>Integrated Stripe API for secure payments</li>
+                                <li>Real-time order tracking using WebSockets</li>
+                                <li>Admin dashboard with analytics</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://muniskumar0.github.io/Food-Delivery/" class="btn btn-custom">Live Demo</a>
+                                <a href="https://muniskumar0.github.io/Food-Delivery/" class="btn btn-outline-light text-center">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Portal -->
+                <div class="col-lg-6">
+                    <div class="project-card">
+                        <div class="project-image" style="background-image: url('./job-portal.png');">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML/CSS</span>
+                                <span class="project-tag">Bootstrap</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="text-white mb-3">JobPortal Pro</h3>
+                            <p class="text-white">Advanced recruitment platform with AI-based candidate matching and resume parsing.</p>
+                            <ul class="tech-list">
+                                <li>Multi-user role system (Employer/Candidate)</li>
+                                <li>Resume parsing using NLP</li>
+                                <li>Advanced search filters</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-custom">Live Demo</a>
+                                <a href="#" class="btn btn-outline-light">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 text-center mb-5">Get In Touch</h2>
+                    <form 
+                        class="contact-form" 
+                        action="https://formspree.io/f/mblobnng" 
+                        method="POST"
+                    >
+                        <input type="hidden" name="_replyto" value="muniskumar050@gmail.com">
+                        <input type="hidden" name="_subject" value="New Message From Portfolio">
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="name"
+                                    placeholder="Your Name" 
+                                    required
+                                >
+                            </div>
+                            <div class="col-md-6">
+                                <input 
+                                    type="email" 
+                                    class="form-control" 
+                                    name="email"
+                                    placeholder="Your Email" 
+                                    required
+                                >
+                            </div>
+                            <div class="col-12">
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    name="subject"
+                                    placeholder="Subject" 
+                                    required
+                                >
+                            </div>
+                            <div class="col-12">
+                                <textarea 
+                                    class="form-control" 
+                                    rows="6" 
+                                    name="message"
+                                    placeholder="Your Message" 
+                                    required
+                                ></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-custom btn-lg px-5 py-3">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="social-links mt-5">
+                        <p class="text-center">Direct Contact:</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="mailto:muniskumar050@gmail.com" class="social-link">
+                                <i class="fas fa-envelope text-white"></i>
+                            </a>
+                            <a href="tel:+91-YOUR-PHONE-NUMBER" class="social-link">
+                                <i class="fas fa-phone text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github text-white"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center py-4">
+        <p class="mb-0">
+            &copy; 2025 Muniskumar. All rights reserved.
+        </p>
     </footer>
 
-    <script>
-        const roles = ['Fullstack Developer', 'Frontend Developer', 'Python Developer', 'Web Developer'];
-        let currentRoleIndex = 0;
-        const roleElement = document.getElementById('role');
 
-        function changeRole() {
-            roleElement.textContent = roles[currentRoleIndex];
-            currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        // Download CV
+         function downloadCV() {
+            const link = document.createElement('a');
+            link.href = './Muniskumar-BSc(IT)-2024-Python_Fullstack_Developer.pdf';
+            link.download = 'Muniskumar-BSc(IT)-2024-Python_Fullstack_Developer.pdf';
+            link.click();
         }
 
-        setInterval(changeRole, 5000);
-        changeRole();
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80 },
+                color: { value: '#ff0000' },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { 
+                    enable: true,
+                    speed: 1,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            }
+        });
+
+        // Scroll Animations
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if(rect.top < window.innerHeight * 0.8) {
+                    el.classList.add('animated');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll();
+  
+        // Initialize Particles.js
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ff0000" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ff0000",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 4,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            }
+        });
+
+        // Form Submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message! I will respond shortly.');
+            e.target.reset();
+        });
+
+        // Scroll Animations
+        const animateElements = () => {
+            document.querySelectorAll('.project-card').forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < window.innerHeight * 0.8) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateElements);
+        animateElements();
     </script>
 
 </body>
-
 </html>
